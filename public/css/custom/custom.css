@@ -1,0 +1,135 @@
+
+
+.sub-navigation{
+	/*background: rgba(242,242,242,0.8);*/
+	background: white;
+	position: relative;
+}
+
+.sub-navigation.active{
+	display: block;
+	z-index: 30;
+}
+
+.sub-menu {
+	padding: 10px 0px;
+	margin: auto;
+
+	text-align: left;
+	padding-left: 16%; 
+
+
+	/*min-height: 80px;*/
+}
+
+.sub-menu li {
+    /*float: left;*/
+    list-style: none;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    display: inline-block;
+    text-align: left;
+}
+
+.sub-menu li:first-child{
+    padding-left: 0px;
+}
+
+.sub-menu li a {
+	display: inline-block;
+	text-decoration: none;
+	color: #000;
+	font-size: 15px;
+	/*line-height: 18px;*/
+}
+
+.sub-menu li a:hover figure, .sub-menu li.active figure{
+	opacity: 0.25;
+}
+
+
+/*Sub menu Icons*/
+.sub-menu .icn{
+	min-height: 28px;
+	background-size: 28px auto;
+	background-repeat: no-repeat;
+	width: 28px;
+	margin: 5px auto;
+}
+.user-ico {
+	border-radius: 100%; 
+	position: absolute; 
+	left: 30px; 
+	top: 170px;
+}
+.blue-name {
+	background: rgba(50, 124, 209, 1); 
+	height: 80px; 
+	padding-left: 16%; 
+	padding-top: 17px;
+}
+.blue-name-post {
+	color: white; 
+	font-size: 12px;
+}
+@media (max-width:1130px) {
+	.blue-name {
+		padding-left: 20%;
+	}
+	.nav-tabs {
+		padding-left: 20% !important;
+	}
+}
+.nav-tabs {
+	padding-left: 17% !important;
+}
+.navbar-collapse.collapse {
+	display: inline-flex !important;
+  }
+  
+  .navbar-nav>li, .navbar-nav {
+	float: left !important;
+  }
+  
+  .navbar-nav.navbar-right:last-child {
+	margin-right: -15px !important;
+  }
+  
+  .navbar-right {
+	float: right!important;
+  }
+  .navbar-nav {
+	  float: left;
+	  display: inline-block !important;
+  }
+@media (max-width:900px) {
+	.user-ico {
+		border-radius: 100%;
+		position: absolute;
+		left: 30px;
+		top: 166px;
+		width: 80px !important;
+		height: 80px !important;
+	}
+}
+@media (min-width:737px) {
+	.marg {
+	margin-right: 3rem !important;
+	margin-left: 3rem !important;
+}
+}
+@media (max-width:641px) {
+	.form-display {
+		display: none !important;
+	}
+}
+.containers {
+	padding-left: 17% !important;
+
+}
+.basic {
+	font-weight: lighter;
+	color: rgba(50, 124, 209, 1);
+}
+

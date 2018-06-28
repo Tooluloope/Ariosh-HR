@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="7578.86 499.972 11.757 11">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.697;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Group_11" data-name="Group 11" class="cls-1" transform="translate(7578.86 499.972)">
+    <ellipse id="Ellipse_1" data-name="Ellipse 1" class="cls-2" cx="3.051" cy="2.914" rx="3.051" ry="2.914" transform="translate(2.821)"/>
+    <path id="Union_1" data-name="Union 1" class="cls-2" d="M0,4.312V2.664l.143-.047C.046,2.607,0,2.6,0,2.593A7.549,7.549,0,0,1,5.848,0a7.764,7.764,0,0,1,5.9,2.641.054.054,0,0,1,.013.022h0v.008s0,0,0,0v1.64Z" transform="translate(0 6.688)"/>
+  </g>
+</svg>
