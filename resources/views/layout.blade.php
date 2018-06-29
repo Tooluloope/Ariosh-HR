@@ -1,4 +1,4 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -34,10 +34,6 @@
     <img class="mb-4 ml-5" src="/images/uploadedwebclientlogo.jpg" alt="" width="130" height="72">
 </div>
     <nav style="background-color: rgba(0, 0, 0, 0.8) !important; color: white !important;" class="navbar navbar-expand-lg navbar-dark bg-light">
-        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button> -->
-    
         <div style=" color: white !important;" class="collapse navbar-collapse marg" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active ml-5">
@@ -58,20 +54,6 @@
     </nav>
     <!-- Contents Here -->
      @yield('content')
-
-
-
-
-
-    <!-- <footer class="footer">
-      <div class="container text-center">
-        <span class="text-muted">Copyright © 2018 Ariosh Ltd. </span>
-      </div>
-    </footer> -->
-        <!-- footer end -->
-    <!-- Booststrap js -->
-
-
     <script type="text/javascript" src="/js/app.js"></script>
     <script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script> 
     <script type="text/javascript" src="/js/popper.min.js"></script>

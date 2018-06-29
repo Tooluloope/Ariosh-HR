@@ -10,7 +10,6 @@
 
 @section('content')
 <!-- Steps form -->
-<div  class="container">
     @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -20,7 +19,7 @@
         </ul>
     </div>
 @endif
-    <div class="card">
+    <div class="card width">
         <div class="card-body mb-4">
 
             <h2 class="text-center font-weight-bold pt-4 pb-5"><strong>Employee's Information</strong></h2>
@@ -67,17 +66,14 @@
                         <div class="form-group col-md-6">
                             <p>Gender</p>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="gender"  value="Male" id="inlineRadio1" value="option1">
+                                    <input required="required" class="form-check-input" type="radio" name="gender"  value="Male" id="inlineRadio1" value="option1">
                                     <label class="form-check-label" for="inlineRadio1">Male</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="gender"  value="Female" id="inlineRadio2" value="option2">
+                                    <input required="required" class="form-check-input" type="radio" name="gender"  value="Female" id="inlineRadio2" value="option2">
                                     <label class="form-check-label" for="inlineRadio2">Female</label>
                                 </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="gender"  value="Other" id="inlineRadio3" value="option3">
-                                    <label class="form-check-label" for="inlineRadio3">Other</label>
-                                </div>
+                               
                         </div>
                     </div>
                     <div class="form-row">
@@ -100,8 +96,8 @@
                             <input required="required" type="text" class="form-control validate" name="next_of_kin" id="emergName">
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="inputState">Relationship</label>
-                            <select name="next_of_kin_relationship" id="inputState" class="form-control validate">
+                            <label for="inputState" data-error="wrong" data-success="right">Relationship</label>
+                            <select name="next_of_kin_relationship" id="inputState" class="form-control validate" required="required">
                             <option value="" selected>---Select---</option>
                             <option value="Father">Father</option>
                             <option value="Mother">Mother</option>
@@ -161,7 +157,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="employeeNo" data-error="wrong" data-success="right">Employee No.</label>
-                            <input required="required" type="text" class="form-control validate" name="employee_number" id="employeeNo" placeholder="Employee Number">
+                            <input required="required" type="number" class="form-control validate" name="employee_number" id="employeeNo" placeholder="Employee Number">
                         </div>
                         <div class="form-group col-md-4">
                                 <label for="dateOfJoining" data-error="wrong" data-success="right">Date Of Resumption</label>
@@ -198,20 +194,11 @@
                                 <option value="Legal">Legal</option>
                             </select>                            
                         </div>  
-                        <div class="form-group col-md-6">        
-                            <label>Companies Assets</label>
-                            <select required="required" name="company_assets[]" size="10" id="multiple" class="form-control form-control-chosen" data-placeholder="Please select all Assets that apply" multiple required>
-                                <option value=""></option>
-                                <option value="Laptop">Laptop</option>
-                                <option value="Mobile Phone">Mobile Phone</option>
-                                <option value="Laptop">Laptop</option>
-                                <option value="Laptop">Laptop</option>
-                                <option value="Laptop">Laptop</option>
-                                <option value="Laptop">Laptop</option>
-                                <option value="Laptop">Laptop</option>
-                                <option value="Laptop">Laptop</option>
-                            </select>
+                        <div class="form-group col-md-4">
+                            <label for="supervisor" data-error="wrong" data-success="right">Direct Supervisor</label>
+                            <input required="required" type="text" class="form-control" name="supervisor" id="supervisor" placeholder="Olumide Oladosu" required>
                         </div>
+                        
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">        
@@ -228,7 +215,7 @@
                                 <option value="Laptop">Laptop</option>
                             </select>
                         </div>
-                        <div class="form-group col-md-6">  
+                        <div class="form-group col-md-6 pb-5">  
                             <label>Position</label>
                             <select required="required" name="position" id="single" class="form-control form-control-chosen" data-placeholder="Please select..." required> 
                                 <option value=""></option>
@@ -246,6 +233,97 @@
                             </select>
                         </div>
                     </div>
+                    <div>
+                        <h4 style="display: inline">Qualifications</h4>
+                        <span>
+                                <button type="button" style="margin-bottom: 5px;" class="btn btn-default btn-circle1 mt-0 "><i class="fas fa-plus"></i>
+                                </button>
+                            </span> 
+                    </div>
+                           
+                    <table id="myTable" class="none table order-list pb-5 table1">
+                        <thead>
+                            <tr>
+                                <td class="font-weight-bold" >Name of University</td>
+                                <td class="font-weight-bold">Degree Obtained</td>
+                                <td class="font-weight-bold">Date Graduated</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="col">
+                                    <input type="text" name="nameOfUniversity" class="form-control" />
+                                </td>
+                                <td scope="col">
+                                    <input type="text" name="degreeObtained"  class="form-control"/>
+                                </td>
+                                <td scope="col">
+                                    <input type="date" name="dateGraduated"  class="form-control"/>
+                                </td>
+                                <td scope="col"><a class="deleteRow"></a>
+                                </td>
+                            </tr>
+                            
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="5" style="text-align: center;">
+                                    <a type="button" class="btn btn-default " id="addrow" value="Add Row">Add Row</a>
+                                </td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+                    <div class="pt-5">
+                            <h4 style="display: inline">Certifications</h4>
+                            <span>
+                                    <button type="button" style="margin-bottom: 5px;" class="btn btn-default btn-circle2 mt-0 "><i class="fas fa-plus"></i>
+                                    </button>
+                                </span> 
+                        </div>
+
+                    <table id="myTable" class="none1 table order-list1 table2">
+                            <thead>
+                                <tr>
+                                    <td class="font-weight-bold" >Name of Certification</td>
+                                    <td class="font-weight-bold">Date Issued</td>
+                                    <td class="font-weight-bold">Expiry Date</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="col">
+                                        <input type="text" name="nameOfCertification" class="form-control" />
+                                    </td>
+                                    <td scope="col">
+                                        <input type="date" name="dateIssued"  class="form-control"/>
+                                    </td>
+                                    <td scope="col">
+                                        <input type="date" name="expiryDate"  class="form-control"/>
+                                    </td>
+                                    <td scope="col"><a class="deleteRow"></a>
+                                    </td>
+                                </tr>
+                                
+    
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="5" style="text-align: center;">
+                                        <a type="button" class="btn btn-default " id="addrow1" value="Add Row">Add Row</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        
+
+                    
+
                     <button class="btn btn-indigo btn-rounded prevBtn float-left" type="button">Previous</button>
                     <button class="btn btn-indigo btn-rounded nextBtn float-right" type="button">Next</button>
                 </div>
@@ -256,9 +334,9 @@
 
 
                     <div class="form-group">
-                    <label class="col-sm-2" for="resume">Upload Resume</label>
+                    <label class="col-sm-2" for="resume">Upload Display <Picture></Picture></label>
                     <div class="col-sm-10">
-                        <input class="form-control" type="file" name="image" id="image" required>                  
+                        <input required="required" class="form-control" type="file" name="image" id="image" required>                  
                     </div>
                 </div>
 
@@ -269,14 +347,16 @@
 
             </form>
 
-        </div>
+
     </div>
-</div>
+
 <!-- Steps form -->
 @endsection
 @section('page_scripts')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.6/chosen.jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<script src="/js/custom/row.js"></script>
+
 <script>
     $('.form-control-chosen').chosen({
   // Chosen options here
@@ -288,6 +368,7 @@
     
 toastr.success('{{session('message')}}')
 </script>
+
 @endif
 @endsection
 

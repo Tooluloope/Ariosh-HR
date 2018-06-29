@@ -3,9 +3,23 @@ $(document).ready(function () {
         allWells = $('.setup-content'),
         allNextBtn = $('.nextBtn'),
         invalid = $('span'),
-        allPrevBtn = $('.prevBtn');
+        allPrevBtn = $('.prevBtn'),
+        btnQua = $('.btn-circle1'),
+        table1 = $('.table1'),
+        none = $('.none'),
+        btnQua2 = $('.btn-circle2'),
+        table2 = $('.table2');
 
     allWells.hide();
+    btnQua.click(() => {
+            table1.toggleClass('none');
+        
+    })
+    btnQua2.click(() => {
+        table2.toggleClass('none1');
+    
+})
+
 
     navListItems.click(function (e) {
         e.preventDefault();
