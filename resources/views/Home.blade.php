@@ -334,7 +334,7 @@
 
 
                     <div class="form-group">
-                    <label class="col-sm-2" for="resume">Upload Display <Picture></Picture></label>
+                    <label class="col-sm-2" for="resume">Upload Display Picture</label>
                     <div class="col-sm-10">
                         <input required="required" class="form-control" type="file" name="image" id="image" required>                  
                     </div>
