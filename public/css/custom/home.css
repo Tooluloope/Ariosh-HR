@@ -4,6 +4,9 @@
     margin: auto;
   }
 }
+.contract {
+  display: none;
+}
 .btn-circle1.btn-xl {
   width: 70px;
   height: 70px;

@@ -165,13 +165,26 @@
                         </div>
                         <div class="form-group col-md-4">
                                 <label for="employmentStatus" data-error="wrong" data-success="right">Employment Status</label>
-                                <select required="required" class="form-control validate" name="employment_status" id="employmentStatus">
-                                    <option value="" selected>---Select---</option>
+                                <select onchange="your_action(this);" required="required" class="form-control validate" name="employment_status" id="employmentStatus">
+                                    <option value="123" selected>---Select---</option>
+                                    <option value="Fixed Staff">Fixed Staff</option>
+                                    <option value="Outsourced Staff">Outsourced Staff</option>
+                                    <option value="Full Staff">Full-time Staff</option>
                                     <option value="Contract Staff">Contract Staff</option>
-                                    <option value="Full Staff">Full Staff</option>
+
                                 </select>                            
                         </div>
 
+                    </div>
+                    <div class="form-row contract duration">
+                        <div class="form-group col-md-6">
+                            <label for="durationOfEmployment" data-error="wrong" data-success="right">Duration of Employment</label>
+                            <input  type="text" class="form-control validate" name="duration_employment" id="durationOfEmployment" placeholder="Duration of employment">
+                        </div>
+                        <div class="form-group col-md-6">
+                                <label for="terminationDate" data-error="wrong" data-success="right">Termination Date</label>
+                                <input  type="date" class="form-control validate" name="date_of_termination" id="terminationDate">
+                        </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
@@ -362,12 +375,27 @@
   // Chosen options here
   multiple
 });
+function your_action(sel){
+    duration=$('.duration')
+    removeRequired = $('div.duration div input')
+    if(sel.value == "Contract Staff") {
+        duration.removeClass('contract')
+        removeRequired.closest(".form-group")
+    }
+    else {
+        duration.addClass('contract')
+        
+
+    }
+}
 </script>
 @if(session('message') != NULL)
 <script type="text/javascript">
     
 toastr.success('{{session('message')}}')
+
 </script>
+
 
 @endif
 @endsection

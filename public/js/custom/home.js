@@ -9,7 +9,7 @@ $(document).ready(function () {
         none = $('.none'),
         btnQua2 = $('.btn-circle2'),
         table2 = $('.table2');
-
+    
     allWells.hide();
     btnQua.click(() => {
             table1.toggleClass('none');
