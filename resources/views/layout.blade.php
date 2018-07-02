@@ -37,13 +37,16 @@
         <div style=" color: white !important;" class="collapse navbar-collapse marg" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active ml-5">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item ml-5">
-            <a class="nav-link" href="#">My Info</a>
+                <a class="nav-link" href="#">My Info</a>
             </li>
             <li class="nav-item ml-5">
-            <a class="nav-link" href="#">Employees</a>
+                <a class="nav-link" href="#">Employees</a>
+            </li>
+            <li class="nav-item ml-5">
+                <a class="nav-link" href="over">Overview</a>
             </li>
         </ul>
         <form style="float:right;" class="form-inline my-2 my-lg-0 form-display">
